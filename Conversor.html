@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Conversor de unidades</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Conversor de unidades</h1>
+
+
+<script>
+function calcular(){
+    
+    var a = document.f1.a.value;
+    var b = document.f1.b1.value;
+    var x = document.f1.b2.value;
+    var r = document.f1.c.value;
+    r=(parseFloat(a)*parseFloat(x))/parseFloat(b);
+   document.f1.c.value=r;
+  
+}
+
+</script> 
+
+
+
+<form name="f1" action="conversor.html" method="POST">
+
+  
+  <input type="text" class="form-control" id="a" name="a" placeholder="Digite aquí el valor a convertir" style="width: 300px">
+  
+  
+<select name="b1" class="form-control"style="width: 300px">
+  <option value="1000000000000" style="color: black" >Byte</option>
+  <option value="1000000000" style="color: black" >Kilobyte</option>
+  <option value="1000000" style="color: black" >Megabyte</option>
+  <option value="1000" style="color: brown">Gibabyte</option>
+  <option value="1" style="color: brown">Terabyte</option>
+</select>
+
+
+  <input type="Button" name="" value="convertir" onclick="calcular()" class="btn btn-primary" style="background-color: #1D5CA7">
+
+<select name="b2" class="form-control"style="width: 300px">
+  <option value="1000000000000" style="color: black" >Byte</option>
+  <option value="1000000000" style="color: black" >Kilobyte</option>
+  <option value="1000000" style="color: black" >Megabyte</option>
+  <option value="1000" style="color: brown">Gibabyte</option>
+  <option value="1" style="color: brown">Terabyte</option>
+</select>
+
+<fieldset disabled>
+  <input type="text" class="form-control" id="c" name="c" placeholder="Resultado"style="width: 300px">
+
+	</div>
+<div><button type="button" id="btnvolver"  class="btn-primary" onclick="history.back()"> Volver</div>
+  	</form>
+
+
+
+
+      
+</div>
+
+</body>
+</html>
